@@ -6,7 +6,6 @@ import Login from "./Login";
 const NavBar = ()=>{
     return(
         <div>
-            <h2>NavBar component</h2>
             <Link to='/Register' >Register</Link> <br/>
             <Link to='/Login' >Login</Link>
             <Route path='/Register'component={Register} exact={true}  />
