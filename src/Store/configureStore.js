@@ -1,11 +1,14 @@
-import {createStore, combineReducers} from "redux"
-import regReducer from "../Reducer/regReducer"
+import {createStore, combineReducers, applyMiddleware} from "redux"
+import thunk from "redux-thunk"
+import adminLogin from "../Reducer/adminLogin"
+import studentDetails from "../Reducer/studentDetails"
 
 
 const configureStore = ()=>{
      const store=createStore(combineReducers({
-         register : regReducer
-     }))
+         admin : adminLogin,
+         student : studentDetails
+     }), applyMiddleware(thunk))
      return store
 }
 

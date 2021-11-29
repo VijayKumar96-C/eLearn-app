@@ -46,19 +46,16 @@ const Register = (props)=>{
             .catch((err)=>{
                 alert(err.message)
             })
-
         console.log(regData)
         setName('')
         setEmail('')
         setPassword('')
         setAcademy('')
-        setwebsite('')
-        
+        setwebsite('')   
     }
-
     return (
         <div className="Register" >
-           <h3>Register component</h3>
+           <h2>Registeration</h2>
            <form onSubmit={handleSubmit} >
                <label>Name</label>
                <input type='text' name="name"  value={name} onChange={handleChange} /> <br/>
